@@ -1,5 +1,7 @@
 #pragma once
 
+#include<list>
+
 // this class is not exclusivity.
 template<class _Arg>
 class Delegate

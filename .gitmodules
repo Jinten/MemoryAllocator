@@ -1,6 +1,0 @@
-[submodule "SimpleSandbox"]
-	path = SimpleSandbox
-	url = https://github.com/Jinten/SimpleSandbox
-[submodule "imgui"]
-	path = imgui
-	url = https://github.com/ocornut/imgui.git

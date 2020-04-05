@@ -11,9 +11,4 @@
 #include<list>
 #include<functional>
 #include<d3d11.h>
-#include"typeAlias.h"
-#include"utilities.h"
-#include"delegate.h"
-#include"../imgui/imgui.h"
-#include"../imgui/examples/imgui_impl_win32.h"
-#include"../imgui/examples/imgui_impl_dx11.h"
+#include"../Lib/lib.h"

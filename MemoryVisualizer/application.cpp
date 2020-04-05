@@ -10,6 +10,16 @@ namespace
 	IDXGISwapChain*          swapChain = nullptr;
 	ID3D11RenderTargetView*  mainRenderTargetView = nullptr;
 
+	template<class T>
+	void safe_release(T*& com)
+	{
+		if(com != nullptr)
+		{
+			com->Release();
+			com = nullptr;
+		}
+	}
+
 	void CleanupDeviceD3D()
 	{
 		safe_release(mainRenderTargetView);
@@ -138,7 +148,11 @@ void Application::update(Action action)
 {
 	while(mKilled == false)
 	{
-		mWindow.updateMessage();
+		if(mWindow.updateMessage())
+		{
+			// acted on window.
+			continue;
+		}
 
 		ImGui_ImplDX11_NewFrame();
 		ImGui_ImplWin32_NewFrame();

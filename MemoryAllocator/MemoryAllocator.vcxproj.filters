@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tlsf">
+      <UniqueIdentifier>{e7c5a0fd-e89f-44f0-98aa-a998a4d8f4dd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="tlsf\tlsf_allocator.cpp">
+      <Filter>tlsf</Filter>
+    </ClCompile>
+    <ClCompile Include="tlsf\tlsf_pool.cpp">
+      <Filter>tlsf</Filter>
+    </ClCompile>
+    <ClCompile Include="tlsf\tlsf_profiler.cpp">
+      <Filter>tlsf</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="tlsf\tlsf_pool.h">
+      <Filter>tlsf</Filter>
+    </ClInclude>
+    <ClInclude Include="tlsf\tlsf_allocator.h">
+      <Filter>tlsf</Filter>
+    </ClInclude>
+    <ClInclude Include="tlsf\tlsf_memory.h">
+      <Filter>tlsf</Filter>
+    </ClInclude>
+    <ClInclude Include="tlsf\tlsf_profiler.h">
+      <Filter>tlsf</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

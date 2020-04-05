@@ -30,13 +30,16 @@ void Window::create(const Desc& desc)
 	::UpdateWindow(mInfo.hWnd);
 }
 
-void Window::updateMessage()
+bool Window::updateMessage()
 {
 	if(PeekMessage(&mInfo.msg, mInfo.hWnd, 0, 0, PM_REMOVE))
 	{
 		TranslateMessage(&mInfo.msg);
 		DispatchMessage(&mInfo.msg);
+		return true;
 	}
+
+	return false;
 }
 
 LRESULT	CALLBACK Window::wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)

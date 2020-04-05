@@ -2,7 +2,6 @@
 
 #include<tchar.h>
 #include<Windows.h>
-#include"typeAlias.h"
 
 class Window sealed
 {
@@ -130,7 +129,7 @@ public:
 	}
 
 	void create(const Desc& desc);
-	void updateMessage();
+	bool updateMessage();
 
 	static LRESULT	CALLBACK wndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
